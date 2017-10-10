@@ -99,12 +99,17 @@ textarea {
    html {
      max-width: 1400px;
      font-size: 16px;
+     width: 100%;
    }
 
    header {
-     width: 99%;
+     width: 100%;
      background: url('../img/hero.png');
      background-position: center;
+     background-size: cover;
+     background-repeat: none;
+     background-position: 100% top;
+     margin-top: 0;
    }
 
    header h1 {
@@ -113,34 +118,37 @@ textarea {
      color: #bbc085;
      text-align: center;
      font-size: 2em;
+     margin-top: 0;
    }
 
    nav ul {
      width: 90%;
      margin: auto;
+     text-align: center;
+     padding-left: 0;
    }
    nav ul li {
      text-align: center;
      list-style: none;
      margin: auto;
      padding-bottom: 10px;
+     padding-left: 0;
    }
    nav ul li a {
      text-transform: uppercase;
      text-decoration: none;
      font-size: 18px;
      color: #828282;
-     padding-left: 80px;
    }
    header h2 {
      width: 90%;
      clear: both;
      font-family: 'Lora', serif;
      line-height: 80px;
-     color: #9b9b9b;
+     color: #808080;
      padding-bottom: 100px;
-     padding-left: 10px;
-     padding-right: 10px;
+     padding-left: 20px;
+     padding-right: 20px;
      font-size: 3em;
      margin-right: 0;
    }
@@ -329,8 +337,94 @@ textarea {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+@media only screen and (min-width: 760px) {
+  /* Style adjustments for viewports that meet the condition */
+  .half-width {
+      width: 50%;
+      float: left;
+      display: inline-block;
+  }
+  header {
+    height: 600px;
+  }
+
+  nav ul li {
+    display: inline-block;
+    padding-top: 60px;
+    padding-left: 30px;
+    font-size: 1.125em;
+  }
+
+  header h1 {
+    text-align: left;
+    padding-left: 50px;
+  }
+  header h2 {
+    padding-top: 100px;
+    font-size: 4.5em;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+/* ABOUT MIN 760 STYLES  */
+#about .half-width {
+  width: 40%;
+  padding-right: 5%;
+}
+#about h2 {
+  padding-top: 50px;
+}
+#about p {
+  font-size: 1.3em;
+}
+#about .half-width-right {
+  float: right;
+}
+
+/* WORK MIN 760 STYLES */
+#work .full-width {
+  background-color: #f9ceb7;
+  height: 100%;
+}
+#work .third-width {
+  width: 30%;
+  float: left;
+  padding-right: 3%;
+}
+#work .third-width h3 {
+  font-size: 1.5em;
+  width: 60%;
+  text-align: center;
+  margin: auto;
+  padding-top: 30px;
+}
+#work .third-width p {
+  width: 90%;
+  margin: auto;
+  padding-top: 20px;
+}
+
+/* CONTACT MIN 760 STYLES*/
+
+#contact .full-width {
+  background-color: #EBEBEB;
+}
+#contact .half-width {
+  width: 45%;
+  margin: auto;
+}
+#contact .half-width-right {
+  float: right;
+}
+#contact h2 {
+  font-size: 2.5em;
+  margin-top: 3px;
+}
+#contact #email-header {
+  font-size: 2em;
+}
+#contact #socialmedia-header {
+  font-size: 1.8em;
+}
 }
 
 @media print,
